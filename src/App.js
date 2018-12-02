@@ -50,7 +50,6 @@ class App extends Component {
 
     try {
       await axios.delete(`${apiEndpoint}/${post.id}`).catch();
-      throw new Error("");
     } catch (ex) {
       alert("Something failed while deleteing a post.");
       this.setState({ posts: originalPosts });
